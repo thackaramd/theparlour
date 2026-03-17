@@ -32,14 +32,15 @@
         }
 
         header h1 {
-            font-size: 3rem; /* smaller than before */
+            font-size: 3rem;
             font-weight: 400;
             margin: 0;
             letter-spacing: 1px;
+            text-transform: uppercase; /* all caps */
         }
 
         header p {
-            font-size: 1.25rem; /* smaller tagline */
+            font-size: 1.25rem;
             font-style: italic;
             margin-top: 0.5rem;
             color: #FDF5E6cc;
@@ -60,34 +61,39 @@
         main {
             max-width: 700px;
             margin: 0 auto;
-            padding: 2rem 1rem 4rem 1rem;
+            padding: 2rem 1rem 6rem 1rem; /* more bottom padding */
         }
 
         section {
-            margin-bottom: 3rem;
+            margin-bottom: 5rem; /* increased spacing between sections */
         }
 
+        p {
+            font-size: 1.05rem;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        /* Submissions section header */
         h2 {
-            font-size: 1.6rem; /* smaller headers */
+            font-size: 1.6rem;
             border-bottom: 1px solid #FDF5E680;
             padding-bottom: 0.3rem;
             margin-bottom: 1rem;
             text-align: center;
         }
 
-        p {
-            font-size: 1.05rem; /* slightly smaller paragraphs */
-            margin-bottom: 1.3rem;
-            text-align: justify;
-        }
-
         /* Footer */
         footer {
             text-align: center;
             padding: 2rem 1rem;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             color: #FDF5E6aa;
             border-top: 1px solid #FDF5E680;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
         }
 
         /* Responsive adjustments */
@@ -113,13 +119,12 @@
 <body>
 
 <header>
-    <h1>The Parlour</h1>
+    <h1>THE PARLOUR</h1>
     <p>A new literary magazine for all voices.</p>
 </header>
 
 <main>
     <section>
-        <h2>Editorial Statement</h2>
         <p>The Parlour is for writing that has presence. We publish short fiction, poetry, essays, and even fragments. We welcome submissions that are honest, refined, and emotionally resonant. Remember, you're writing to the world and the world is listening. Each piece is an encounter.</p>
     </section>
 
@@ -130,7 +135,8 @@
 </main>
 
 <footer>
-    &copy; 2026 The Parlour. All rights reserved.
+    <p>Max Thackara</p>
+    <p><strong>Editor, The Parlour</strong></p>
 </footer>
 
 </body>
