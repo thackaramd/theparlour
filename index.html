@@ -11,7 +11,7 @@
             font-family: "Times New Roman", serif;
             background-color: #041E12; /* deep forest green */
             color: #FDF5E6; /* cream */
-            line-height: 1.55; /* slightly tighter */
+            line-height: 1.55;
         }
 
         a {
@@ -37,7 +37,7 @@
             margin: 0 0 1rem 0;
             letter-spacing: 1px;
             text-transform: uppercase; /* all caps */
-            display: inline-block; /* for line positioning */
+            display: inline-block;
         }
 
         /* Cream line under title */
@@ -51,7 +51,7 @@
         }
 
         header p {
-            font-size: 1.25rem; /* tagline */
+            font-size: 1.25rem;
             font-style: italic;
             margin-top: 1.5rem;
             color: #FDF5E6cc;
@@ -60,25 +60,28 @@
 
         /* Main content */
         main {
-            max-width: 700px;
+            max-width: 700px; /* overall max width */
             margin: 0 auto;
             padding: 2rem 1rem 4rem 1rem;
         }
 
         section {
-            margin-bottom: 3rem; /* tighter spacing between sections */
+            margin-bottom: 3rem; /* spacing between sections */
         }
 
-        p {
+        /* Paragraph container with narrower width */
+        section p {
+            max-width: 600px; /* narrower than main container */
+            margin: 0 auto 1rem auto; /* centers narrower paragraph */
             font-size: 1.05rem;
-            margin-bottom: 1rem; /* less spacing between paragraphs */
             text-align: justify;
         }
 
         /* Sign-off styling */
         .signature {
+            max-width: 600px;
+            margin: 1.5rem auto 0 auto; /* aligns with paragraphs */
             text-align: left;
-            margin-top: 1.5rem;
             font-size: 1.05rem;
         }
 
@@ -97,7 +100,8 @@
                 font-size: 1.1rem;
             }
 
-            p {
+            section p, .signature {
+                max-width: 90%; /* narrower on mobile */
                 font-size: 1rem;
             }
         }
