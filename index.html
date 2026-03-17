@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Parlour – Literary Magazine</title>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <style>
         /* Global Styles */
         body {
             margin: 0;
-            font-family: "Merriweather", Georgia, serif;
-            background-color: #041E12; /* darker forest green */
+            font-family: "Times New Roman", serif;
+            background-color: #041E12; /* deep forest green */
             color: #FDF5E6; /* cream */
-            line-height: 1.75;
+            line-height: 1.6;
         }
 
         a {
@@ -28,81 +27,85 @@
         /* Header / Hero Section */
         header {
             text-align: center;
-            padding: 6rem 1rem 2rem 1rem;
+            padding: 5rem 1rem 2rem 1rem;
             position: relative;
         }
 
         header h1 {
-            font-size: 4rem;
+            font-size: 3rem; /* smaller than before */
             font-weight: 400;
             margin: 0;
             letter-spacing: 1px;
         }
 
         header p {
-            font-size: 1.5rem;
+            font-size: 1.25rem; /* smaller tagline */
             font-style: italic;
             margin-top: 0.5rem;
-            color: #FDF5E6cc; /* slightly muted cream */
-            text-align: center; /* ensure tagline centered */
+            color: #FDF5E6cc;
+            text-align: center;
         }
 
         /* Gold underline below header */
         header::after {
             content: "";
             display: block;
-            width: 80px;
+            width: 70px;
             height: 2px;
             background-color: #D4AF37;
-            margin: 1.5rem auto 0 auto;
+            margin: 1.2rem auto 0 auto;
         }
 
         /* Main content */
         main {
-            max-width: 800px;
+            max-width: 700px;
             margin: 0 auto;
             padding: 2rem 1rem 4rem 1rem;
         }
 
         section {
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
         }
 
         h2 {
-            font-size: 2rem;
-            border-bottom: 1px solid #FDF5E680; /* subtle divider */
+            font-size: 1.6rem; /* smaller headers */
+            border-bottom: 1px solid #FDF5E680;
             padding-bottom: 0.3rem;
             margin-bottom: 1rem;
             text-align: center;
         }
 
         p {
-            font-size: 1.15rem;
-            margin-bottom: 1.5rem;
-            text-align: justify; /* paragraphs justified for elegance */
+            font-size: 1.05rem; /* slightly smaller paragraphs */
+            margin-bottom: 1.3rem;
+            text-align: justify;
         }
 
         /* Footer */
         footer {
             text-align: center;
             padding: 2rem 1rem;
-            font-size: 0.9rem;
-            color: #FDF5E6aa; /* soft cream for subtlety */
+            font-size: 0.85rem;
+            color: #FDF5E6aa;
             border-top: 1px solid #FDF5E680;
         }
 
         /* Responsive adjustments */
         @media (max-width: 600px) {
             header h1 {
-                font-size: 3rem;
+                font-size: 2.5rem;
             }
 
             header p {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
             }
 
             h2 {
-                font-size: 1.5rem;
+                font-size: 1.4rem;
+            }
+
+            p {
+                font-size: 1rem;
             }
         }
     </style>
