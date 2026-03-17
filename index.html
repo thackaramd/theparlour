@@ -51,7 +51,7 @@
         }
 
         header p {
-            font-size: 1.25rem;
+            font-size: 1.25rem; /* tagline */
             font-style: italic;
             margin-top: 1.5rem;
             color: #FDF5E6cc;
@@ -69,12 +69,21 @@
             margin-bottom: 3rem; /* spacing between sections */
         }
 
-        /* Paragraph container with narrower width */
+        /* Paragraphs */
         section p {
             max-width: 600px; /* narrower than main container */
             margin: 0 auto 1rem auto; /* centers narrower paragraph */
             font-size: 1.05rem;
             text-align: justify;
+        }
+
+        /* Centered "SUBMISSIONS NOW OPEN" */
+        .submissions-open {
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 2rem 0;
         }
 
         /* Sign-off styling */
@@ -104,6 +113,10 @@
                 max-width: 90%; /* narrower on mobile */
                 font-size: 1rem;
             }
+
+            .submissions-open {
+                font-size: 1.1rem;
+            }
         }
     </style>
 </head>
@@ -117,9 +130,10 @@
 <main>
     <section>
         <p>The Parlour is for writing that has presence. We publish short fiction, poetry, essays, and even fragments. We welcome submissions that are honest, refined, and emotionally resonant. Remember, you're writing to the world and the world is listening. Each piece is an encounter.</p>
-    </section>
 
-    <section>
+        <!-- Centered SUBMISSIONS NOW OPEN -->
+        <p class="submissions-open">SUBMISSIONS NOW OPEN</p>
+
         <p>Submissions are now open for the first issue. The theme is <strong>'Meeting'</strong>, but it is optional. Email your work to <a href="mailto:submissions@theparlour.org.uk">submissions@theparlour.org.uk</a>, including a brief bio and title. Deadline: <strong>1st May 2026</strong>.</p>
 
         <!-- Sign-off directly after submissions -->
