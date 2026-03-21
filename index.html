@@ -11,7 +11,8 @@
             font-family: "Times New Roman", serif;
             background-color: #041E12; /* deep forest green */
             color: #FDF5E6; /* cream */
-            line-height: 1.55;
+            line-height: 1.7;
+            letter-spacing: 0.2px;
         }
 
         a {
@@ -27,7 +28,7 @@
         /* Header / Hero Section */
         header {
             text-align: center;
-            padding: 5rem 1rem 2rem 1rem;
+            padding: 5rem 1rem 2.5rem 1rem;
             position: relative;
         }
 
@@ -35,7 +36,7 @@
             font-size: 3rem;
             font-weight: 400;
             margin: 0 0 1rem 0;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
             text-transform: uppercase;
             display: inline-block;
         }
@@ -51,7 +52,7 @@
         }
 
         header p {
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             font-style: italic;
             margin-top: 1.5rem;
             color: #FDF5E6cc;
@@ -69,28 +70,50 @@
             margin-bottom: 3rem;
         }
 
+        /* Intro subtitle */
+        .intro-subtitle {
+            text-align: center;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #FDF5E6aa;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Divider line under subtitle */
+        .intro-subtitle::after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 1px;
+            background-color: #FDF5E680;
+            margin: 0.8rem auto 1.5rem auto;
+        }
+
         /* Paragraphs */
         section p {
             max-width: 600px;
-            margin: 0 auto 1rem auto;
+            margin: 0 auto 1.2rem auto;
             font-size: 1.05rem;
             text-align: justify;
         }
 
-        /* Centered "SUBMISSIONS NOW OPEN" */
+        /* Perfectly centered "SUBMISSIONS NOW OPEN" */
         .submissions-open {
-            width: 100%;        /* full width to center properly */
+            display: block;
+            width: 100%;
             text-align: center;
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             font-weight: bold;
             text-transform: uppercase;
-            margin: 2rem 0;
+            margin: 2.5rem 0;
+            letter-spacing: 2px;
         }
 
         /* Sign-off styling */
         .signature {
             max-width: 600px;
-            margin: 1.5rem auto 0 auto;
+            margin: 2rem auto 0 auto;
             text-align: left;
             font-size: 1.05rem;
         }
@@ -103,11 +126,11 @@
         /* Responsive adjustments */
         @media (max-width: 600px) {
             header h1 {
-                font-size: 2.5rem;
+                font-size: 2.4rem;
             }
 
             header p {
-                font-size: 1.1rem;
+                font-size: 1.05rem;
             }
 
             section p, .signature {
@@ -116,7 +139,7 @@
             }
 
             .submissions-open {
-                font-size: 1.1rem;
+                font-size: 1.05rem;
             }
         }
     </style>
@@ -130,10 +153,13 @@
 
 <main>
     <section>
+        <!-- Intro subtitle -->
+        <p class="intro-subtitle">Introduction from the Editor</p>
+
         <p>The Parlour is for writing that has presence. We publish short fiction, poetry, essays, and even fragments. We welcome submissions that are honest, refined, and emotionally resonant. Remember, you're writing to the world and the world is listening. Each piece is an encounter.</p>
 
         <!-- Centered SUBMISSIONS NOW OPEN -->
-        <p class="submissions-open">SUBMISSIONS NOW OPEN</p>
+        <div class="submissions-open">SUBMISSIONS NOW OPEN</div>
 
         <p>Submissions are now open for the first issue. The theme is <strong>'Meeting'</strong>, but it is optional. Email your work to <a href="mailto:submissions@theparlour.org.uk">submissions@theparlour.org.uk</a>, including a brief bio and title. Deadline: <strong>1st May 2026</strong>.</p>
 
