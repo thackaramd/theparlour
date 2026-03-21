@@ -28,7 +28,7 @@
         /* Header */
         header {
             text-align: center;
-            padding: 3rem 1rem 2.5rem 1rem; /* header closer to top */
+            padding: 2rem 1rem 2rem 1rem; /* smaller top/bottom padding */
         }
 
         /* Full-width lines */
@@ -42,10 +42,10 @@
 
         /* Title */
         header h1 {
-            font-size: 3rem;
+            font-size: 2.2rem; /* smaller */
             font-weight: 400;
-            margin: 1rem 0 0.3rem 0;
-            letter-spacing: 6px;
+            margin: 0.5rem 0 0.3rem 0;
+            letter-spacing: 4px;
             text-transform: uppercase;
             display: inline-block;
         }
@@ -54,16 +54,16 @@
         header h1::after {
             content: "";
             display: block;
-            width: 70px;
-            height: 1px; /* thinner */
+            width: 50px; /* smaller */
+            height: 1px;
             background-color: #F5E9D3;
             margin: 0.5rem auto 0 auto;
         }
 
         header p {
-            font-size: 1.2rem;
+            font-size: 1rem; /* smaller */
             font-style: italic;
-            margin-top: 0.8rem;
+            margin-top: 0.5rem;
             color: #FFF8E5cc;
         }
 
@@ -81,11 +81,11 @@
         /* Intro subtitle */
         .intro-subtitle {
             text-align: center;
-            font-size: 1.05rem; /* slightly bigger */
+            font-size: 1.05rem;
             font-weight: bold;
             letter-spacing: 2px;
             text-transform: uppercase;
-            margin-bottom: 2rem; /* reduced spacing to flow better */
+            margin-bottom: 2rem;
         }
 
         .intro-subtitle::after {
@@ -135,15 +135,15 @@
         /* Responsive tweaks */
         @media (max-width: 600px) {
             header {
-                padding: 2rem 1rem 2.5rem 1rem; /* smaller top padding on mobile */
+                padding: 1.5rem 1rem 2rem 1rem;
             }
 
             header h1 {
-                font-size: 2.4rem;
+                font-size: 1.8rem;
             }
 
             header p {
-                font-size: 1.05rem;
+                font-size: 0.95rem;
             }
 
             section p,
@@ -155,11 +155,11 @@
 
             .intro-subtitle {
                 font-size: 1rem;
-                margin-bottom: 1.8rem; /* slightly smaller on mobile */
+                margin-bottom: 1.8rem;
             }
 
             header h1::after {
-                width: 60px; /* optional: slightly smaller divider on mobile */
+                width: 40px;
             }
         }
     </style>
@@ -167,10 +167,10 @@
 <body>
 
 <header>
-    <div class="title-line"></div> <!-- line above title -->
+    <div class="title-line"></div>
     <h1>THE PARLOUR</h1>
     <p>A new literary magazine for all voices.</p>
-    <div class="subtitle-line"></div> <!-- line below subtitle -->
+    <div class="subtitle-line"></div>
 </header>
 
 <main>
