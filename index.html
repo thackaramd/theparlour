@@ -31,22 +31,21 @@
             padding: 5rem 1rem 2.5rem 1rem;
         }
 
+        /* Title with lines */
+        .title-line {
+            width: 100%;
+            height: 2px;
+            background-color: #F5E9D3; /* cream */
+            margin: 0.5rem 0;
+        }
+
         header h1 {
             font-size: 3rem;
             font-weight: 400;
-            margin: 0 0 0.5rem 0;
+            margin: 1rem 0 0.5rem 0;
             letter-spacing: 6px;
             text-transform: uppercase;
             display: inline-block;
-        }
-
-        header h1::after {
-            content: "";
-            display: block;
-            width: 70px;
-            height: 2px;
-            background-color: #F5E9D3;
-            margin: 0.6rem auto 0 auto;
         }
 
         header p {
@@ -77,13 +76,11 @@
             margin-bottom: 0.5rem;
         }
 
-        .intro-subtitle::after {
-            content: "";
-            display: block;
-            width: 50px;
-            height: 1px;
-            background-color: #FFF8E580;
-            margin: 0.8rem auto 1.5rem auto;
+        .intro-subtitle-line {
+            width: 100%;
+            height: 2px;
+            background-color: #F5E9D3; /* cream */
+            margin: 0.5rem 0 1rem 0;
         }
 
         /* Responsive paragraph width */
@@ -147,8 +144,10 @@
 <body>
 
 <header>
+    <div class="title-line"></div> <!-- line above title -->
     <h1>THE PARLOUR</h1>
     <p>A new literary magazine for all voices.</p>
+    <div class="intro-subtitle-line"></div> <!-- line below subtitle -->
 </header>
 
 <main>
