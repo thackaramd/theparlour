@@ -28,7 +28,7 @@
         /* Header */
         header {
             text-align: center;
-            padding: 3rem 1rem 2.5rem 1rem; /* reduced top padding */
+            padding: 3rem 1rem 2.5rem 1rem; /* header closer to top */
         }
 
         /* Full-width lines */
@@ -50,12 +50,12 @@
             display: inline-block;
         }
 
-        /* Little centered divider under title */
+        /* Little centered divider under title (thinner) */
         header h1::after {
             content: "";
             display: block;
             width: 70px;
-            height: 2px;
+            height: 1px; /* thinner */
             background-color: #F5E9D3;
             margin: 0.5rem auto 0 auto;
         }
@@ -85,7 +85,7 @@
             font-weight: bold;
             letter-spacing: 2px;
             text-transform: uppercase;
-            margin-bottom: 2.5rem; /* more space below subtitle */
+            margin-bottom: 2rem; /* reduced spacing to flow better */
         }
 
         .intro-subtitle::after {
@@ -135,7 +135,7 @@
         /* Responsive tweaks */
         @media (max-width: 600px) {
             header {
-                padding: 2rem 1rem 2.5rem 1rem; /* smaller top padding for mobile */
+                padding: 2rem 1rem 2.5rem 1rem; /* smaller top padding on mobile */
             }
 
             header h1 {
@@ -155,7 +155,11 @@
 
             .intro-subtitle {
                 font-size: 1rem;
-                margin-bottom: 2rem; /* slightly smaller spacing on mobile */
+                margin-bottom: 1.8rem; /* slightly smaller on mobile */
+            }
+
+            header h1::after {
+                width: 60px; /* optional: slightly smaller divider on mobile */
             }
         }
     </style>
