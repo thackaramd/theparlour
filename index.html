@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,8 +9,8 @@
         body {
             margin: 0;
             font-family: "Times New Roman", serif;
-            background-color: #041E12; /* deep forest green */
-            color: #FFF8E5; /* brighter, visible cream */
+            background-color: #041E12;
+            color: #FFF8E5;
             line-height: 1.7;
             letter-spacing: 0.2px;
         }
@@ -23,14 +22,13 @@
         }
 
         a:hover {
-            color: #D4AF37; /* subtle gold on hover */
+            color: #D4AF37;
         }
 
-        /* Header / Hero Section */
+        /* Header */
         header {
             text-align: center;
             padding: 5rem 1rem 2.5rem 1rem;
-            position: relative;
         }
 
         header h1 {
@@ -55,13 +53,12 @@
             font-size: 1.2rem;
             font-style: italic;
             margin-top: 0.8rem;
-            color: #FFF8E5cc; /* slightly transparent cream */
-            text-align: center;
+            color: #FFF8E5cc;
         }
 
-        /* Main content */
+        /* Main */
         main {
-            max-width: 700px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 2rem 1rem 4rem 1rem;
         }
@@ -77,7 +74,6 @@
             font-weight: bold;
             letter-spacing: 2px;
             text-transform: uppercase;
-            color: #FFF8E5;
             margin-bottom: 0.5rem;
         }
 
@@ -90,29 +86,31 @@
             margin: 0.8rem auto 1.5rem auto;
         }
 
-        /* Paragraphs */
+        /* Responsive paragraph width */
         section p {
-            max-width: 600px;
+            width: 92%;
+            max-width: 680px;
             margin: 0 auto 1.4rem auto;
             font-size: 1.05rem;
             text-align: justify;
         }
 
-        /* Centered "SUBMISSIONS NOW OPEN" */
+        /* Submissions banner */
         .submissions-open {
-            display: block;
-            width: 100%;
+            width: 92%;
+            max-width: 680px;
+            margin: 2.5rem auto;
             text-align: center;
             font-size: 1rem;
             font-weight: bold;
             text-transform: uppercase;
-            margin: 2.5rem 0;
             letter-spacing: 2px;
         }
 
-        /* Sign-off styling */
+        /* Signature */
         .signature {
-            max-width: 600px;
+            width: 92%;
+            max-width: 680px;
             margin: 2rem auto 0 auto;
             text-align: left;
             font-size: 1.05rem;
@@ -123,7 +121,7 @@
             font-weight: bold;
         }
 
-        /* Responsive adjustments */
+        /* Responsive tweaks */
         @media (max-width: 600px) {
             header h1 {
                 font-size: 2.4rem;
@@ -133,13 +131,11 @@
                 font-size: 1.05rem;
             }
 
-            section p, .signature {
-                max-width: 90%;
-                font-size: 1rem;
-            }
-
+            section p,
+            .signature,
             .submissions-open {
-                font-size: 0.95rem;
+                width: 90%;
+                font-size: 1rem;
             }
 
             .intro-subtitle {
@@ -157,10 +153,8 @@
 
 <main>
     <section>
-        <!-- Intro subtitle -->
         <p class="intro-subtitle">Introduction from the Editor</p>
 
-        <!-- Editor's Introduction -->
         <p><strong>The Parlour</strong> is a magazine for writing that values presence as much as craft—work that feels alive, attentive, and grounded in lived experience.</p>
 
         <p>By “presence”, I mean taking the time to notice: the world around you, your own thoughts, the small shifts in feeling that are easy to overlook. Writing that doesn’t rush. Writing that stays.</p>
@@ -169,7 +163,6 @@
 
         <p>Contributors are welcome to request anonymity. Where possible, though, we like to present each piece with the author’s name, age, and town—placing the writing in the world it comes from.</p>
 
-        <!-- Submissions -->
         <div class="submissions-open">SUBMISSIONS NOW OPEN</div>
 
         <p>Submissions are now open for our first issue.</p>
@@ -180,14 +173,12 @@
 
         <p>Send your work to <a href="mailto:submissions@theparlour.org.uk">submissions@theparlour.org.uk</a>, including a brief bio (2–3 lines) and the title of your piece.</p>
 
-        <!-- New paragraph added here -->
         <p>For the first issue, every submission will receive tailored editorial feedback, regardless of whether it is selected for publication.</p>
 
         <p>The deadline for this issue is 31st May 2026.</p>
 
         <p>For any questions, you’re welcome to write to <a href="mailto:editor@theparlour.org.uk">editor@theparlour.org.uk</a>.</p>
 
-        <!-- Sign-off -->
         <div class="signature">
             <p>Max Thackara<br><em>Editor, The Parlour</em></p>
         </div>
