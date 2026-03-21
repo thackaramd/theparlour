@@ -31,21 +31,33 @@
             padding: 5rem 1rem 2.5rem 1rem;
         }
 
-        /* Title with lines */
-        .title-line {
+        /* Full-width lines */
+        .title-line,
+        .subtitle-line {
             width: 100%;
             height: 2px;
             background-color: #F5E9D3; /* cream */
             margin: 0.5rem 0;
         }
 
+        /* Title */
         header h1 {
             font-size: 3rem;
             font-weight: 400;
-            margin: 1rem 0 0.5rem 0;
+            margin: 1rem 0 0.3rem 0;
             letter-spacing: 6px;
             text-transform: uppercase;
             display: inline-block;
+        }
+
+        /* Little centered divider under title */
+        header h1::after {
+            content: "";
+            display: block;
+            width: 70px;
+            height: 2px;
+            background-color: #F5E9D3;
+            margin: 0.5rem auto 0 auto;
         }
 
         header p {
@@ -69,21 +81,23 @@
         /* Intro subtitle */
         .intro-subtitle {
             text-align: center;
-            font-size: 0.9rem;
+            font-size: 1.05rem; /* slightly bigger */
             font-weight: bold;
             letter-spacing: 2px;
             text-transform: uppercase;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1.5rem; /* more space below subtitle */
         }
 
-        .intro-subtitle-line {
-            width: 100%;
-            height: 2px;
-            background-color: #F5E9D3; /* cream */
-            margin: 0.5rem 0 1rem 0;
+        .intro-subtitle::after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 1px;
+            background-color: #FFF8E580;
+            margin: 0.8rem auto 1.5rem auto;
         }
 
-        /* Responsive paragraph width */
+        /* Paragraphs */
         section p {
             width: 92%;
             max-width: 680px;
@@ -136,7 +150,7 @@
             }
 
             .intro-subtitle {
-                font-size: 0.95rem;
+                font-size: 1rem;
             }
         }
     </style>
@@ -147,7 +161,7 @@
     <div class="title-line"></div> <!-- line above title -->
     <h1>THE PARLOUR</h1>
     <p>A new literary magazine for all voices.</p>
-    <div class="intro-subtitle-line"></div> <!-- line below subtitle -->
+    <div class="subtitle-line"></div> <!-- line below subtitle -->
 </header>
 
 <main>
