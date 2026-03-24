@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Parlour – Literary Magazine</title>
     <style>
-        /* Global Styles */
         body {
             margin: 0;
             font-family: "Times New Roman", serif;
@@ -25,24 +24,21 @@
             color: #D4AF37;
         }
 
-        /* Header */
         header {
             text-align: center;
-            padding: 2rem 1rem 2rem 1rem; /* smaller top/bottom padding */
+            padding: 2rem 1rem 2rem 1rem;
         }
 
-        /* Full-width lines */
         .title-line,
         .subtitle-line {
             width: 100%;
             height: 2px;
-            background-color: #F5E9D3; /* cream */
+            background-color: #F5E9D3;
             margin: 0.5rem 0;
         }
 
-        /* Title */
         header h1 {
-            font-size: 2.2rem; /* smaller */
+            font-size: 2.2rem;
             font-weight: 400;
             margin: 0.5rem 0 0.3rem 0;
             letter-spacing: 4px;
@@ -50,24 +46,22 @@
             display: inline-block;
         }
 
-        /* Little centered divider under title (thinner) */
         header h1::after {
             content: "";
             display: block;
-            width: 50px; /* smaller */
+            width: 50px;
             height: 1px;
             background-color: #F5E9D3;
             margin: 0.5rem auto 0 auto;
         }
 
         header p {
-            font-size: 1rem; /* smaller */
+            font-size: 1rem;
             font-style: italic;
             margin-top: 0.5rem;
             color: #FFF8E5cc;
         }
 
-        /* Main */
         main {
             max-width: 900px;
             margin: 0 auto;
@@ -78,7 +72,6 @@
             margin-bottom: 3rem;
         }
 
-        /* Intro subtitle */
         .intro-subtitle {
             text-align: center;
             font-size: 1.05rem;
@@ -97,7 +90,6 @@
             margin: 0.8rem auto 1.5rem auto;
         }
 
-        /* Paragraphs */
         section p {
             width: 92%;
             max-width: 680px;
@@ -106,7 +98,6 @@
             text-align: justify;
         }
 
-        /* Submissions banner */
         .submissions-open {
             width: 92%;
             max-width: 680px;
@@ -118,7 +109,16 @@
             letter-spacing: 2px;
         }
 
-        /* Signature */
+        .deadline {
+            width: 92%;
+            max-width: 680px;
+            margin: 0.5rem auto 2rem auto;
+            text-align: center;
+            font-size: 0.95rem;
+            font-style: italic;
+            color: #FFF8E5cc;
+        }
+
         .signature {
             width: 92%;
             max-width: 680px;
@@ -132,7 +132,6 @@
             font-weight: bold;
         }
 
-        /* Responsive tweaks */
         @media (max-width: 600px) {
             header {
                 padding: 1.5rem 1rem 2rem 1rem;
@@ -148,7 +147,8 @@
 
             section p,
             .signature,
-            .submissions-open {
+            .submissions-open,
+            .deadline {
                 width: 90%;
                 font-size: 1rem;
             }
@@ -198,6 +198,8 @@
         <p>Send your work to <a href="mailto:submissions@theparlour.org.uk">submissions@theparlour.org.uk</a>, including a brief bio (2–3 lines) and the title of your piece.</p>
 
         <p>For any questions, you’re welcome to write to <a href="mailto:editor@theparlour.org.uk">editor@theparlour.org.uk</a>.</p>
+
+        <div class="deadline">Deadline: 31st May, 2026</div>
 
         <div class="signature">
             <p>Max Thackara<br><em>Editor, The Parlour</em></p>
