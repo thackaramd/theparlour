@@ -4,209 +4,348 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Parlour</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
     <style>
+        :root {
+            --bg: #041E12;
+            --bg-soft: #08261A;
+            --text: #F7F1E3;
+            --muted: rgba(247, 241, 227, 0.72);
+            --line: rgba(247, 241, 227, 0.16);
+            --gold: #D7B56D;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
-            font-family: "Times New Roman", serif;
-            background-color: #041E12;
-            color: #FFF8E5;
-            line-height: 1.7;
-            letter-spacing: 0.2px;
+            background:
+                radial-gradient(circle at top, rgba(215,181,109,0.05), transparent 35%),
+                linear-gradient(to bottom, #041E12, #061A12);
+            color: var(--text);
+            font-family: "Cormorant Garamond", serif;
+            line-height: 1.85;
+            letter-spacing: 0.15px;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
         }
 
         a {
-            color: #FFF8E5;
-            text-decoration: underline;
-            transition: color 0.3s;
+            color: var(--text);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(247,241,227,0.35);
+            transition:
+                color 0.3s ease,
+                border-color 0.3s ease,
+                opacity 0.3s ease;
         }
 
         a:hover {
-            color: #D4AF37;
+            color: var(--gold);
+            border-color: rgba(215,181,109,0.5);
         }
 
         header {
             text-align: center;
-            padding: 2rem 1rem 2rem 1rem;
+            padding: 5.5rem 1.5rem 3.5rem;
+            position: relative;
+        }
+
+        .header-inner {
+            max-width: 760px;
+            margin: 0 auto;
         }
 
         .title-line,
         .subtitle-line {
             width: 100%;
-            height: 2px;
-            background-color: #F5E9D3;
-            margin: 0.5rem 0;
+            height: 1px;
+            background: linear-gradient(
+                to right,
+                transparent,
+                rgba(247,241,227,0.18),
+                rgba(247,241,227,0.5),
+                rgba(247,241,227,0.18),
+                transparent
+            );
+        }
+
+        .title-line {
+            margin-bottom: 2rem;
+        }
+
+        .subtitle-line {
+            margin-top: 2rem;
         }
 
         header h1 {
-            font-size: 2.2rem;
-            font-weight: 400;
-            margin: 0.5rem 0 0.3rem 0;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            display: inline-block;
+            margin: 0;
+            font-size: clamp(2.3rem, 6vw, 3.5rem);
+            font-weight: 600;
+            letter-spacing: 0.42rem;
+            color: #FFF9EE;
         }
 
-        header h1::after {
-            content: "";
-            display: block;
-            width: 50px;
+        .title-divider {
+            width: 54px;
             height: 1px;
-            background-color: #F5E9D3;
-            margin: 0.5rem auto 0 auto;
+            background: rgba(247,241,227,0.5);
+            margin: 1.25rem auto 1.2rem;
         }
 
         header p {
-            font-size: 1rem;
-            font-style: italic;
-            margin-top: 0.5rem;
-            color: #FFF8E5cc;
+            margin: 0;
+            font-family: "Inter", sans-serif;
+            font-size: 0.95rem;
+            font-weight: 300;
+            letter-spacing: 0.12rem;
+            text-transform: uppercase;
+            color: var(--muted);
         }
 
         main {
-            max-width: 900px;
+            max-width: 940px;
             margin: 0 auto;
-            padding: 2rem 1rem 4rem 1rem;
+            padding: 0 1.5rem 5rem;
         }
 
         section {
-            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .content-shell {
+            max-width: 760px;
+            margin: 0 auto;
         }
 
         .intro-subtitle {
             text-align: center;
-            font-size: 1.05rem;
-            font-weight: bold;
-            letter-spacing: 2px;
+            font-family: "Inter", sans-serif;
+            font-size: 0.82rem;
+            font-weight: 500;
+            letter-spacing: 0.24rem;
             text-transform: uppercase;
-            margin-bottom: 2rem;
+            color: rgba(247,241,227,0.72);
+            margin-bottom: 3rem;
         }
 
         .intro-subtitle::after {
             content: "";
             display: block;
-            width: 50px;
+            width: 44px;
             height: 1px;
-            background-color: #FFF8E580;
-            margin: 0.8rem auto 1.5rem auto;
+            background: rgba(247,241,227,0.28);
+            margin: 1rem auto 0;
         }
 
         section p {
-            width: 92%;
-            max-width: 680px;
-            margin: 0 auto 1.4rem auto;
-            font-size: 1.05rem;
+            width: 100%;
+            max-width: 690px;
+            margin: 0 auto 1.6rem;
+            font-size: 1.28rem;
+            font-weight: 400;
+            color: rgba(247,241,227,0.95);
             text-align: justify;
         }
 
+        section p strong {
+            font-weight: 600;
+            color: #FFFDF6;
+        }
+
+        section p em {
+            color: rgba(247,241,227,0.82);
+        }
+
+        .paragraph-break {
+            width: 26px;
+            height: 1px;
+            background: rgba(247,241,227,0.22);
+            margin: 2.7rem auto;
+        }
+
         .submissions-open {
-            width: 92%;
-            max-width: 680px;
-            margin: 2.5rem auto;
+            max-width: 690px;
+            margin: 4rem auto 1.5rem;
             text-align: center;
-            font-size: 1rem;
-            font-weight: bold;
+            font-family: "Inter", sans-serif;
+            font-size: 0.82rem;
+            font-weight: 500;
+            letter-spacing: 0.28rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            color: var(--gold);
+        }
+
+        .submissions-open::before,
+        .submissions-open::after {
+            content: "";
+            display: block;
+            width: 52px;
+            height: 1px;
+            background: rgba(215,181,109,0.35);
+            margin: 0 auto 1rem;
+        }
+
+        .submissions-open::after {
+            margin: 1rem auto 0;
         }
 
         .deadline {
-            width: 92%;
-            max-width: 680px;
-            margin: 0.5rem auto 2rem auto;
+            max-width: 690px;
+            margin: 2.2rem auto 0;
             text-align: center;
-            font-size: 0.95rem;
+            font-size: 1.05rem;
             font-style: italic;
-            color: #FFF8E5cc;
+            color: var(--muted);
         }
 
         .signature {
-            width: 92%;
-            max-width: 680px;
-            margin: 2rem auto 0 auto;
+            max-width: 690px;
+            margin: 4rem auto 0;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(247,241,227,0.08);
+        }
+
+        .signature p {
+            margin-bottom: 0;
             text-align: left;
-            font-size: 1.05rem;
+            font-size: 1.18rem;
         }
 
         .signature em {
+            display: inline-block;
+            margin-top: 0.2rem;
             font-style: italic;
-            font-weight: bold;
+            color: rgba(247,241,227,0.7);
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 700px) {
             header {
-                padding: 1.5rem 1rem 2rem 1rem;
+                padding: 4rem 1.25rem 2.8rem;
+            }
+
+            .title-line {
+                margin-bottom: 1.5rem;
+            }
+
+            .subtitle-line {
+                margin-top: 1.5rem;
             }
 
             header h1 {
-                font-size: 1.8rem;
+                letter-spacing: 0.24rem;
             }
 
             header p {
-                font-size: 0.95rem;
+                font-size: 0.78rem;
+                line-height: 1.6;
+                letter-spacing: 0.08rem;
             }
 
-            section p,
-            .signature,
-            .submissions-open,
-            .deadline {
-                width: 90%;
-                font-size: 1rem;
+            main {
+                padding: 0 1.25rem 4rem;
             }
 
             .intro-subtitle {
-                font-size: 1rem;
-                margin-bottom: 1.8rem;
+                margin-bottom: 2.4rem;
+                line-height: 1.6;
             }
 
-            header h1::after {
-                width: 40px;
+            section p {
+                font-size: 1.12rem;
+                line-height: 1.9;
+                text-align: left;
+            }
+
+            .submissions-open {
+                font-size: 0.76rem;
+                line-height: 1.8;
+            }
+
+            .signature {
+                margin-top: 3rem;
             }
         }
     </style>
 </head>
+
 <body>
 
 <header>
-    <div class="title-line"></div>
-    <h1>THE PARLOUR</h1>
-    <p>A new literary magazine for all voices.</p>
-    <div class="subtitle-line"></div>
+    <div class="header-inner">
+        <div class="title-line"></div>
+
+        <h1>THE PARLOUR</h1>
+
+        <div class="title-divider"></div>
+
+        <p>A new literary magazine for all voices.</p>
+
+        <div class="subtitle-line"></div>
+    </div>
 </header>
 
 <main>
     <section>
-        <p class="intro-subtitle">Introduction from the Editor</p>
+        <div class="content-shell">
 
-        <p><strong>The Parlour</strong> is a magazine for writing that values presence as much as craft—work that feels alive, attentive, and grounded in lived experience.</p>
+            <p class="intro-subtitle">Introduction from the Editor</p>
 
-        <p>By “presence”, I mean taking the time to notice: the world around you, your own thoughts, the small shifts in feeling that are easy to overlook.</p>
+            <p><strong>The Parlour</strong> is a magazine for writing that values presence as much as craft—work that feels alive, attentive, and grounded in lived experience.</p>
 
-        <p>We’re interested in work that feels real—whether quiet or bold, polished or still in motion. This is a space for writers to try things out, take risks, and follow what matters to them.</p>
+            <p>By “presence”, I mean taking the time to notice: the world around you, your own thoughts, the small shifts in feeling that are easy to overlook.</p>
 
-        <p>We welcome writing from all ages. We look for work that holds the reader: attentive, considered and open.<p>
+            <p>We’re interested in work that feels real—whether quiet or bold, polished or still in motion. This is a space for writers to try things out, take risks, and follow what matters to them.</p>
 
-        <p>Contributors are welcome to request anonymity. Where possible, though, we like to present each piece with the author’s name, age, and town—placing the writing in the world it comes from.</p>
+            <div class="paragraph-break"></div>
 
-        <div class="submissions-open">SUBMISSIONS NOW OPEN</div>
+            <p>We welcome writing from all ages.</p>
 
-        <p>Submissions are now open for our first issue.</p>
+            <p>Contributors are welcome to request anonymity. Where possible, though, we like to present each piece with the author’s name, age, and town—placing the writing in the world it comes from.</p>
 
-        <p><em>Theme: MEETING (optional)</em>. You’re welcome to respond to it, or to send work that’s taken shape elsewhere.</p>
+            <p>At <strong>The Parlour</strong>, submissions are read from the experience of sitting with a piece, noticing how the feeling is held in the writing, and whether it leaves space for the reader to meet it.</p>
 
-        <p>We accept <em>poetry, short fiction, and creative nonfiction (including personal reflection)</em>. There’s no minimum length, and a maximum of 2000 words.</p>
+            <div class="submissions-open">
+                Submissions Now Open
+            </div>
 
-        <p>For the first issue, every submission will receive considered editorial feedback, regardless of whether it is selected for publication.</p>
+            <p>Submissions are now open for our first issue.</p>
 
-        <p>Send your work to <a href="mailto:submissions@theparlour.org.uk">submissions@theparlour.org.uk</a>, including a brief bio (2–3 lines) and the title of your piece.</p>
+            <p><em>Theme: MEETING (optional)</em>. You’re welcome to respond to it, or to send work that’s taken shape elsewhere.</p>
 
-        <p>Deadline: 31st May 2026.</p>
+            <p>We accept <em>poetry, short fiction, and creative nonfiction (including personal reflection)</em>. There’s no minimum length, and a maximum of 2000 words.</p>
 
-        <p>For any questions, you’re welcome to write to <a href="mailto:editor@theparlour.org.uk">editor@theparlour.org.uk</a>.</p>
-        
-        <div class="signature">
-            <p>Max Thackara<br><em>Editor, The Parlour</em></p>
+            <p>For the first issue, every submission will receive considered editorial feedback, regardless of whether it is selected for publication.</p>
+
+            <div class="paragraph-break"></div>
+
+            <p>
+                Send your work to
+                <a href="mailto:submissions@theparlour.org.uk">submissions@theparlour.org.uk</a>,
+                including a brief bio (age, location, perhaps where/when the piece was written) and the title of your piece.
+            </p>
+
+            <p class="deadline">Deadline: 31st May 2026.</p>
+
+            <p>
+                For any questions, you’re welcome to write to
+                <a href="mailto:editor@theparlour.org.uk">editor@theparlour.org.uk</a>.
+            </p>
+
+            <div class="signature">
+                <p>
+                    Max Thackara<br>
+                    <em>Editor, The Parlour</em>
+                </p>
+            </div>
+
         </div>
-
     </section>
 </main>
 
