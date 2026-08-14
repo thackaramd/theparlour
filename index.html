@@ -25,14 +25,25 @@
             box-sizing: border-box;
         }
 
+        html {
+            min-height: 100%;
+            background: #03150D;
+        }
+
         body {
             margin: 0;
+            min-height: 100vh;
+            min-height: 100svh;
+            display: flex;
+            flex-direction: column;
+
             background: linear-gradient(
                 to bottom,
                 #03150D 0%,
                 #041710 35%,
                 #05160F 100%
             );
+
             color: var(--text);
             font-family: "Cormorant Garamond", serif;
             line-height: 1.82;
@@ -57,6 +68,7 @@
         }
 
         header {
+            width: 100%;
             text-align: center;
             padding: 2.8rem 1.5rem 2.4rem;
             position: relative;
@@ -115,9 +127,11 @@
         }
 
         main {
+            width: 100%;
             max-width: 920px;
             margin: 0 auto;
             padding: 2.5rem 1.5rem 4.5rem;
+            flex: 1;
         }
 
         .content-shell {
@@ -188,6 +202,10 @@
         }
 
         @media (max-width: 700px) {
+            body {
+                min-height: 100dvh;
+            }
+
             header {
                 padding: 2.2rem 1.2rem 2rem;
             }
@@ -203,6 +221,7 @@
             }
 
             main {
+                width: 100%;
                 padding: 0 1.2rem 3.8rem;
             }
 
@@ -291,3 +310,6 @@
         </div>
     </section>
 </main>
+
+</body>
+</html>
