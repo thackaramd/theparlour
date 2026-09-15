@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Parlour</title>
-    <meta name="description" content="The Parlour is a literary magazine for all voices, published in Bedford." />
+    <meta name="description" content="The Parlour will open again in 2027. Find Issue One in print or digital, and contact the editor." />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -262,6 +262,22 @@
                 font-size: 0.9rem;
             }
         }
+        /* A quiet holding page between issues. */
+        .content-shell { max-width: 560px; text-align: center; }
+        section p { text-align: center; }
+        .intro-subtitle { margin-bottom: 3rem; }
+        .issue-note { font-size: 1.12rem; line-height: 1.65; margin-bottom: 1.7rem; }
+        .stockist-details { display: block; margin-top: 0.6rem; font-size: 1rem; color: var(--muted); }
+        .stockist-details a { color: inherit; }
+        .contact { margin-top: 3rem; }
+        a:focus-visible { outline: 1px solid var(--text); outline-offset: 4px; }
+        @media (max-width: 700px) {
+            .intro-subtitle { margin-bottom: 2.5rem; }
+            .issue-note { font-size: 1.06rem; }
+            .stockist-details { font-size: 0.96rem; }
+            .contact { margin-top: 2.5rem; }
+            .contact a { display: inline-block; }
+        }
     </style>
 </head>
 
@@ -282,39 +298,28 @@
 </header>
 
 <main>
-    <section>
+    <section aria-label="The Parlour returns in 2027">
         <div class="content-shell">
+            <p class="intro-subtitle">The Parlour will open again in 2027.</p>
 
-            <p class="intro-subtitle">Until next time</p>
-
-            <p>
-                Issue One of <strong>The Parlour</strong> is now out in the world. Thank you to everyone who helped bring it there — to those who sent work, trusted the magazine with their writing and art, read its pages, came along to our first gathering, bought a copy, or simply took an interest in this small beginning.
+            <p class="issue-note">
+                Issue One will soon be available at<br>
+                <a href="https://eaglebookshop.co.uk/">The Eagle Bookshop</a>
+                <span class="stockist-details">
+                    16–20 St Peter’s Street, Bedford, MK40 2NN<br>
+                    <a href="tel:+441234269295">01234 269295</a>
+                </span>
             </p>
 
-            <p>
-                What began as an idea for a place in which literature might bring people together became, for a little while, exactly that. I’m very grateful to everyone who entered into it.
+            <p class="issue-note">
+                Print and digital copies are available from<br>
+                <a href="https://walkdenhousepress.co.uk/the-parlour-issue-one.html">Walkden House Press</a>.
             </p>
-
-            <p>
-                For now, the parlour is quiet. We’ll open the door again in the new year.
-            </p>
-
-            <p>
-                Until then, thank you for being part of Issue One.
-            </p>
-
-            <div class="signature">
-                <p>
-                    <strong>Max Thackara</strong><br>
-                    <em>Editor, <strong>The Parlour</strong></em>
-                </p>
-            </div>
 
             <p class="contact">
-                Questions or enquiries:
+                Questions or enquiries:<br>
                 <a href="mailto:editor@theparlour.org.uk">editor@theparlour.org.uk</a>
             </p>
-
         </div>
     </section>
 </main>
