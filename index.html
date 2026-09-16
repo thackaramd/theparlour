@@ -16,272 +16,70 @@
         :root {
             --bg: #07140E;
             --text: #F1EBDD;
-            --muted: rgba(241, 235, 221, 0.66);
+            --muted: rgba(241, 235, 221, 0.72);
             --line: rgba(241, 235, 221, 0.16);
         }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        html {
-            min-height: 100%;
-            background: var(--bg);
-        }
-
+        * { box-sizing: border-box; }
+        html { min-height: 100%; background: var(--bg); }
         body {
             margin: 0;
-            min-height: 100vh;
             min-height: 100svh;
-            display: flex;
-            flex-direction: column;
-
-            position: relative;
             background: var(--bg);
-
             color: var(--text);
             font-family: "Cormorant Garamond", serif;
-            line-height: 1.82;
-            letter-spacing: 0.1px;
+            font-weight: 400;
             -webkit-font-smoothing: antialiased;
             text-rendering: optimizeLegibility;
         }
-
         body::before {
             content: "";
             position: fixed;
             inset: 0;
             pointer-events: none;
             opacity: 0.018;
-            background-image:
-                url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+            background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
         }
-
         a {
-            color: var(--text);
+            color: inherit;
             text-decoration: underline;
-            text-decoration-color: rgba(241,235,221,0.28);
-            text-underline-offset: 0.18em;
-            border-bottom: 0;
-            transition: text-decoration-color 0.25s ease;
+            text-decoration-color: rgba(241, 235, 221, 0.28);
+            text-underline-offset: 0.2em;
+            text-decoration-thickness: 1px;
+            transition: text-decoration-color 0.2s ease;
         }
-
-        a:hover {
-            color: var(--text);
-            text-decoration-color: rgba(241,235,221,0.72);
-        }
-
-        header {
-            width: 100%;
-            text-align: center;
-            padding: 5.5rem 1.5rem 1rem;
-            position: relative;
-        }
-
-        .header-inner {
-            max-width: 680px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .title-line,
-        .subtitle-line {
-            width: 100%;
-            height: 1px;
-            background: var(--line);
-        }
-
-        .title-line {
-            display: none;
-        }
-
-        .subtitle-line {
-            width: 150px;
-            flex: 0 0 auto;
-            align-self: center;
-            margin: 0.65rem auto;
-        }
-
+        a:hover { text-decoration-color: rgba(241, 235, 221, 0.75); }
+        a:focus-visible { outline: 1px solid var(--text); outline-offset: 4px; }
+        header { padding: 3.75rem 1.5rem 0; text-align: center; }
         header h1 {
             margin: 0;
-            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-size: clamp(2rem, 4vw, 2.5rem);
             font-weight: 500;
-            letter-spacing: 0.21rem;
-            line-height: 1.05;
-            color: var(--text);
+            line-height: 1.1;
+            letter-spacing: 0.2rem;
         }
-
-        .title-divider {
-            display: none;
-        }
-
-        .title-place {
-            margin: 0;
-            font-size: 1.55rem;
-            font-weight: 500;
-            letter-spacing: 0.055rem;
-            line-height: 1.05;
-        }
-
-        main {
-            width: 100%;
-            max-width: 860px;
-            margin: 0 auto;
-            padding: 3rem 1.5rem 5rem;
-            flex: 1;
-        }
-
-        .content-shell {
-            max-width: 670px;
-            margin: 0 auto;
-        }
-
-        .intro-subtitle {
-            text-align: center;
-            font-size: 1.35rem;
-            font-weight: 400;
-            font-style: italic;
-            letter-spacing: 0.04rem;
-            line-height: 1.5;
-            color: rgba(241,235,221,0.76);
-            margin: 0 auto 2.8rem;
-        }
-
-        .intro-subtitle::after {
-            display: none;
-        }
-
-        section p {
-            width: 100%;
-            max-width: 640px;
-            margin: 0 auto 1.35rem;
-            font-size: 1.2rem;
-            font-weight: 400;
-            color: rgba(241,235,221,0.91);
-            text-align: left;
-        }
-
-        section p strong {
-            font-weight: 600;
-            color: var(--text);
-        }
-
-        .paragraph-break {
-            width: 22px;
-            height: 1px;
-            background: var(--line);
-            margin: 2.4rem auto;
-        }
-
-        .signature {
-            max-width: 640px;
-            margin: 3.5rem auto 0;
-            padding-top: 1.8rem;
-            border-top: 1px solid rgba(241,235,221,0.08);
-        }
-
-        .signature p {
-            margin-bottom: 0;
-            text-align: left;
-            font-size: 1.12rem;
-        }
-
-        .signature em {
-            display: inline-block;
-            margin-top: 0.15rem;
-            font-style: italic;
-            color: var(--muted);
-        }
-
-        .contact {
-            max-width: 640px;
-            margin: 4rem auto 0;
-            text-align: center;
-            font-size: 0.94rem;
-            font-weight: 600;
-            color: rgba(241,235,221,0.62);
-            letter-spacing: 0.015rem;
-        }
-
-        .contact a {
-            color: inherit;
-            font-weight: 600;
-            text-decoration-color: rgba(241,235,221,0.25);
-        }
-
-        .contact a:hover {
-            color: rgba(241,235,221,0.85);
-            text-decoration-color: rgba(241,235,221,0.55);
-        }
-
-        @media (max-width: 700px) {
-            body {
-                min-height: 100dvh;
-            }
-
-            header {
-                padding: 4rem 1.2rem 0.85rem;
-            }
-
-            header h1 {
-                letter-spacing: 0.14rem;
-            }
-
-            .subtitle-line {
-                width: 120px;
-            }
-
-            .title-place {
-                font-size: 1.3rem;
-            }
-
-            main {
-                width: 100%;
-                padding: 2.5rem 1.2rem 3.8rem;
-            }
-
-            .intro-subtitle {
-                font-size: 1.18rem;
-                margin-bottom: 2.4rem;
-                line-height: 1.5;
-            }
-
-            section p {
-                font-size: 1.06rem;
-                line-height: 1.82;
-            }
-
-            .signature {
-                margin-top: 2.8rem;
-            }
-
-            .contact {
-                margin-top: 3.5rem;
-                font-size: 0.9rem;
-            }
-        }
-        /* A compact letter with a nearby enquiries footer. */
-        header { padding: 3.5rem 1.5rem 0; }
-        main { max-width: 588px; padding: 2.2rem 1.5rem 0; flex: none; }
-        .content-shell { max-width: 540px; }
-        section p { text-align: left; font-size: 1.12rem; line-height: 1.65; margin-bottom: 1rem; }
-        .stockist-details { display: block; margin-top: 0.4rem; font-size: 0.97rem; color: var(--muted); }
-        .stockist-details a { color: inherit; }
-        .signature { margin-top: 1.5rem; padding-top: 0; border: 0; }
-        .signature p { font-size: 1.04rem; line-height: 1.5; }
-        .contact { width: calc(100% - 3rem); max-width: 540px; margin: 1.8rem auto 0; padding: 1rem 0 2rem; border-top: 1px solid var(--line); font-size: 0.9rem; line-height: 1.6; }
-        .contact p { margin: 0; }
+        .subtitle-line { width: 100px; height: 1px; background: var(--line); margin: 0.85rem auto 0.7rem; }
+        .title-place { margin: 0; font-size: 1.05rem; font-weight: 400; line-height: 1.2; letter-spacing: 0.12rem; }
+        main { width: min(100% - 3rem, 520px); margin: 3.25rem auto 0; }
+        .letter { font-size: 1.2rem; line-height: 1.7; color: rgba(241, 235, 221, 0.94); }
+        p { margin: 0; }
+        .letter > p + p { margin-top: 1.4rem; }
+        .signature { margin-top: 1.65rem; font-size: 1.06rem; line-height: 1.5; }
+        .signature span { display: block; font-weight: 500; }
+        .signature em { display: block; margin-top: 0.15rem; color: var(--muted); }
+        .availability { margin-top: 2.65rem; font-size: 1rem; line-height: 1.7; color: var(--muted); }
+        .stockist-details { margin-top: 0.85rem; font-size: 0.94rem; line-height: 1.65; font-style: normal; }
+        .contact { width: min(100% - 3rem, 520px); margin: 2.5rem auto 0; padding-bottom: 2.75rem; font-size: 0.9rem; font-weight: 400; line-height: 1.7; text-align: center; color: var(--muted); }
         .contact a { display: inline-block; }
-        a:focus-visible { outline: 1px solid var(--text); outline-offset: 4px; }
-        @media (max-width: 700px) {
-            header { padding: 2.6rem 1.25rem 0; }
-            main { padding: 1.8rem 1.25rem 0; }
-            section p { font-size: 1.06rem; }
-            .stockist-details { font-size: 0.94rem; }
-            .signature { margin-top: 1.25rem; }
-            .contact { width: calc(100% - 2.5rem); margin-top: 1.5rem; padding-bottom: 1.5rem; }
+        @media (max-width: 600px) {
+            header { padding-top: 2.75rem; }
+            header h1 { letter-spacing: 0.15rem; }
+            .title-place { font-size: 1rem; }
+            main { width: calc(100% - 3rem); margin-top: 2.75rem; }
+            .letter { font-size: 1.12rem; line-height: 1.75; }
+            .letter > p + p { margin-top: 1.25rem; }
+            .signature { margin-top: 1.5rem; }
+            .availability { margin-top: 2.3rem; }
+            .contact { margin-top: 2.2rem; padding-bottom: 2.25rem; }
         }
     </style>
 </head>
@@ -289,39 +87,26 @@
 <body>
 
 <header>
-    <div class="header-inner">
-        <div class="title-line"></div>
-
-        <h1>THE PARLOUR</h1>
-
-        <div class="title-divider"></div>
-
-        <div class="subtitle-line"></div>
-
-        <p class="title-place">BEDFORD</p>
-    </div>
+    <h1>THE PARLOUR</h1>
+    <div class="subtitle-line" aria-hidden="true"></div>
+    <p class="title-place">BEDFORD</p>
 </header>
 
 <main>
-    <section aria-label="A note from the editor">
-        <div class="content-shell">
-            <p><strong>The Parlour</strong> is a literary magazine published in Bedford, bringing together writing and art in a space for attentive reading.</p>
-
-            <p>The magazine is currently closed. The room will open again in 2027.</p>
-
-            <p>In the meantime, print and digital copies of Issue One are available from <a href="https://walkdenhousepress.co.uk/the-parlour-issue-one.html">Walkden House Press</a>.</p>
-
-            <p>Issue One will also soon be on the shelves at <a href="https://eaglebookshop.co.uk/">The Eagle Bookshop</a>.
-                <span class="stockist-details">16–20 St Peter’s Street, Bedford, MK40 2NN<br>
-                    <a href="tel:+441234269295">01234 269295</a>
-                </span>
-            </p>
-
-            <div class="signature">
-                <p><strong>Max Thackara</strong><br><em>Editor, The Parlour</em></p>
-            </div>
+    <section class="letter" aria-label="A note from the editor">
+        <p>The Parlour is a literary magazine made in Bedford—a meeting place for writing, art and the people who gather around them.</p>
+        <p>For now, the room is quiet. It will open again in 2027.</p>
+        <div class="signature">
+            <p><span>Max Thackara</span><em>Editor, The Parlour</em></p>
         </div>
     </section>
+
+    <aside class="availability" aria-label="Find Issue One">
+        <p>Issue One is available in print and digital from <a href="https://walkdenhousepress.co.uk/the-parlour-issue-one.html">Walkden House Press</a>, and will soon be stocked by <a href="https://eaglebookshop.co.uk/">The Eagle Bookshop</a>.</p>
+        <address class="stockist-details">16–20 St Peter’s Street, Bedford, MK40 2NN<br>
+            <a href="tel:+441234269295">01234 269295</a>
+        </address>
+    </aside>
 </main>
 
 <footer class="contact">
