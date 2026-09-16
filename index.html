@@ -20,7 +20,7 @@
             --line: rgba(241, 235, 221, 0.16);
         }
         * { box-sizing: border-box; }
-        html { min-height: 100%; background: var(--bg); }
+        html { min-height: 100%; background: var(--bg); font-size: 95%; }
         body {
             margin: 0;
             min-height: 100svh;
@@ -52,14 +52,14 @@
         header { padding: 3.75rem 1.5rem 0; text-align: center; }
         header h1 {
             margin: 0;
-            font-size: clamp(2rem, 4vw, 2.5rem);
+            font-size: clamp(2rem, 3.8vw, 2.5rem);
             font-weight: 500;
             line-height: 1.1;
             letter-spacing: 0.2rem;
         }
-        .subtitle-line { width: 100px; height: 1px; background: var(--line); margin: 0.85rem auto 0.7rem; }
+        .subtitle-line { width: 6.25rem; height: 1px; background: var(--line); margin: 0.85rem auto 0.7rem; }
         .title-place { margin: 0; font-size: 1.05rem; font-weight: 400; line-height: 1.2; letter-spacing: 0.12rem; }
-        main { width: min(100% - 3rem, 520px); margin: 5rem auto 0; }
+        main { width: min(100% - 3rem, 32.5rem); margin: 5rem auto 0; }
         .letter { font-size: 1.2rem; line-height: 1.7; color: rgba(241, 235, 221, 0.94); }
         p { margin: 0; }
         .letter > p + p { margin-top: 1.4rem; }
@@ -68,18 +68,18 @@
         .signature em { display: block; margin-top: 0.15rem; color: var(--muted); }
         .availability { margin-top: 2.65rem; font-size: 1rem; font-weight: 500; line-height: 1.7; color: rgba(241, 235, 221, 0.92); }
         .stockist-details { margin-top: 0.85rem; font-size: 0.94rem; line-height: 1.65; font-style: normal; }
-        .contact { width: min(100% - 3rem, 520px); margin: 2.5rem auto 0; padding-bottom: 2.75rem; font-size: 0.9rem; font-weight: 500; line-height: 1.7; text-align: center; color: rgba(241, 235, 221, 0.92); }
+        .contact { width: min(100% - 3rem, 32.5rem); margin: 2.5rem auto 0; padding-bottom: 2.75rem; font-size: 0.9rem; font-weight: 500; line-height: 1.7; text-align: center; color: rgba(241, 235, 221, 0.92); }
         .contact a { display: inline-block; }
         @media (max-width: 600px) {
             header { padding-top: 2.75rem; }
             header h1 { letter-spacing: 0.15rem; }
             .title-place { font-size: 1rem; }
-            main { width: 82%; max-width: 440px; margin-top: 4.5rem; }
+            main { width: 82%; max-width: 27.5rem; margin-top: 4.5rem; }
             .letter { font-size: 1rem; line-height: 1.8; }
             .letter > p + p { margin-top: 1.25rem; }
             .signature { margin-top: 1.5rem; font-size: 1rem; }
             .availability { margin-top: 2.3rem; font-size: 0.94rem; }
-            .contact { width: 82%; max-width: 440px; margin-top: 2.2rem; padding-bottom: 2.25rem; }
+            .contact { width: 82%; max-width: 27.5rem; margin-top: 2.2rem; padding-bottom: 2.25rem; }
         }
     </style>
 </head>
